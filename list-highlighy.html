@@ -1,54 +1,25 @@
 <!DOCTYPE HTML>
 <html>
-
 <head>
   <meta charset="utf-8">
-  <style>
-    .selected {
-      background: #0f0;
-    }
-
-    li {
-      cursor: pointer;
-    }
-  </style>
+  <link rel="stylesheet" href="highlight-list-style.css">
 </head>
 
 <body>
-
-  Click on a list item to select it.
-  <br>
+<p>
+  Click on a list item to select it. <br>
+</p>
+  
 
   <ul id="ul">
-    <li>Christopher Robin</li>
-    <li>Winnie-the-Pooh</li>
-    <li>Tigger</li>
-    <li>Kanga</li>
-    <li>Rabbit. Just rabbit.</li>
+    <li>list 1</li>
+    <li>list 2</li>
+    <li>list 3</li>
+    <li>list 4</li>
+    <li>list 5</li>
   </ul>
 
-  <script>
-    const ul = document.getElementById("ul");
-
-    ul.onclick = function (event) {
-        if (event.target.tagName != "LI") return ;
-        if (event.ctrlKey || event.metaKey) {
-            return multiselection(event.target)
-        }
-        else {
-            return singleselection(event.target)
-        }
-
-        multiselection(event)
-        li.classList.add("selected")
-
-        singleselection(event)
-        ul.classList.add("selected")
-
-    }
-
-    
-  </script>
+  <script src="highlight-list-js.js"> </script>
 
 </body>
 </html>
